@@ -1,9 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 public class Newspaper extends JFrame{
     private JPanel Journalist;
@@ -22,34 +17,56 @@ public class Newspaper extends JFrame{
     private JTabbedPane tabbedPane3;
     private JTabbedPane tabbedPane2;
     private JTabbedPane tabbedPane4;
-    private JTextField cUsersArticlesSubmittedTextField;
-    private JTextArea Summary;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JButton submitButton;
-    private JTextField J_Revise_Path;
-    private JTextArea J_Revise_Summary;
-    private JTextField J_Revise_Category;
-    private JTextField J_Revise_Writers;
-    private JTextField J_Revise_Tags;
-    private JFormattedTextField J_Revise_Pages;
-    private JButton J_Revise_Submit;
-    private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
-    private JButton OKButton;
-    //private CardLayout c1 = (CardLayout)Main_Window.getLayout();
+    private JTextField J_path;
+    private JTextArea J_summary;
+    private JTextField J_writers;
+    private JTextField J_tags;
+    private JTextField J_pages;
+    private JTextField J_category;
+    private JButton J_Submit_BTN;
+    private JTextField J_Rev_path;
+    private JTextArea J_Rev_summary;
+    private JTextField J_Rev_category;
+    private JTextField J_Rev_writers;
+    private JTextField J_Rev_tags;
+    private JTextField J_Rev_pages;
+    private JButton J_Rev_Submit_BTN;
+    private JTextField E_newCategory;
+    private JTextField A_sheet_returned;
+    private JTextField A_fromMonth;
+    private JTextField A_toMonth;
+    private JButton A_Payroll_OKBTN;
+    private JTextField J_images;
+    private JTextField J_Rev_Images;
+    private JTextField E_path;
+    private JTextArea E_summary;
+    private JTextField E_category;
+    private JTextField E_writers;
+    private JTextField E_tags;
+    private JTextField E_pages;
+    private JTextField E_images;
+    private JButton E_Submit_Article_BTN;
+    private JButton E_Category_Submit_BTN;
+    private JButton A_returned_Submit_BTN;
 
-    public void switchPanel(JPanel panel) {
+    private void switchPanel(JPanel panel)
+    {
         Main_Window.removeAll();
         Main_Window.add(panel);
         Main_Window.repaint();
         Main_Window.revalidate();
+        pack();
     }
 
+    private void submit_article(String path, String summary, String category, String writers, String tags, int pages, String Images)
+    {
+        // sql submit article ---
+    }
+
+    private void payroll(int from, int to)
+    {
+        // sql view payroll
+    }
     public Newspaper(){
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setBounds(100, 100, 450, 300);
@@ -57,58 +74,73 @@ public class Newspaper extends JFrame{
         setContentPane(Main_Window);
         setTitle("Newspaper");
 
-        button1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent)
-            {
-                String username = Username_TXTFLD.getText();
-                String pswd = Pswd_TXTFLD.getText();
+        button1.addActionListener(actionEvent -> {
+            String username = Username_TXTFLD.getText();
+            String pswd = Pswd_TXTFLD.getText();
 
-                if (username.equals("J"))
-                {
+            switch (username) {
+                case "J":
                     setTitle(getTitle() + " - Journalist");
                     switchPanel(Journalist);
-                }
-                else if (username.equals("E"))
-                {
+                    break;
+                case "E":
                     setTitle(getTitle() + " - Editor in Chief");
                     switchPanel(Editor);
-                }
-                else if (username.equals("A"))
-                {
+                    break;
+                case "A":
                     setTitle(getTitle() + " - Administrator");
                     switchPanel(Admin);
-                }
-                else if (username.equals("P"))
-                {
+                    break;
+                case "P":
                     setTitle(getTitle() + " - Publisher");
                     switchPanel(Publisher);
-                }
+                    break;
             }
         });
-    }
 
-    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+        J_Submit_BTN.addActionListener(actionEvent -> {
+            String path = J_path.getText();
+            String summary = J_summary.getText();
+            String category = J_category.getText();
+            String writers = J_writers.getText();
+            String tags = J_tags.getText();
+            int pages = Integer.parseInt(J_pages.getText());
+            String images = J_images.getText();
 
-        try (Connection conn = JDBC.getConnection()) {
+            submit_article(path, summary, category, writers, tags, pages, images);
+        });
 
-            // print out a message
-            System.out.println(String.format("Connected to database %s "
-                    + "successfully.", conn.getCatalog()));
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
+        J_Rev_Submit_BTN.addActionListener(actionEvent -> {
+            String path = J_Rev_path.getText();
+            String summary = J_Rev_summary.getText();
+            String category = J_Rev_category.getText();
+            String writers = J_Rev_writers.getText();
+            String tags = J_Rev_tags.getText();
+            int pages = Integer.parseInt(J_Rev_pages.getText());
+            String images = J_Rev_Images.getText();
+
+            submit_article(path, summary, category, writers, tags, pages, images);
         }
+        );
 
-        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    Newspaper frame = new Newspaper();
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
+        E_Submit_Article_BTN.addActionListener(actionEvent -> {
+            String path = E_path.getText();
+            String summary = E_summary.getText();
+            String category = E_category.getText();
+            String writers = E_writers.getText();
+            String tags = E_tags.getText();
+            int pages = Integer.parseInt(E_pages.getText());
+            String images = E_images.getText();
+
+            submit_article(path, summary, category, writers, tags, pages, images);
+        });
+
+
+        A_Payroll_OKBTN.addActionListener(actionEvent -> {
+            int from = Integer.parseInt(A_fromMonth.getText());
+            int to = Integer.parseInt(A_toMonth.getText());
+
+            payroll(from, to);
         });
     }
 }

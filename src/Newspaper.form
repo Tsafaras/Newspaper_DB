@@ -89,7 +89,7 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <grid id="61fb8" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="61fb8" layout-manager="GridLayoutManager" row-count="8" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <tabbedpane title="New Article"/>
@@ -105,7 +105,7 @@
                           <text value="Path:"/>
                         </properties>
                       </component>
-                      <component id="5f9f6" class="javax.swing.JTextField" binding="cUsersArticlesSubmittedTextField" default-binding="true">
+                      <component id="5f9f6" class="javax.swing.JTextField" binding="J_path">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -123,7 +123,7 @@
                           <text value="Summary:"/>
                         </properties>
                       </component>
-                      <component id="27218" class="javax.swing.JTextArea" binding="Summary">
+                      <component id="27218" class="javax.swing.JTextArea" binding="J_summary">
                         <constraints>
                           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="50"/>
@@ -165,7 +165,7 @@
                           <text value="No. of Pages:"/>
                         </properties>
                       </component>
-                      <component id="8433c" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+                      <component id="8433c" class="javax.swing.JTextField" binding="J_writers">
                         <constraints>
                           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -173,7 +173,7 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="3cbef" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+                      <component id="3cbef" class="javax.swing.JTextField" binding="J_tags">
                         <constraints>
                           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -181,7 +181,7 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="52648" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+                      <component id="52648" class="javax.swing.JTextField" binding="J_pages">
                         <constraints>
                           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -189,7 +189,7 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="1f50a" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+                      <component id="1f50a" class="javax.swing.JTextField" binding="J_category">
                         <constraints>
                           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -197,13 +197,29 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="fc4b8" class="javax.swing.JButton" binding="submitButton" default-binding="true">
+                      <component id="fc4b8" class="javax.swing.JButton" binding="J_Submit_BTN">
                         <constraints>
-                          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="26" use-parent-layout="false"/>
+                          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="26" use-parent-layout="false"/>
                         </constraints>
                         <properties>
                           <text value="Submit"/>
                         </properties>
+                      </component>
+                      <component id="a2185" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Images:"/>
+                        </properties>
+                      </component>
+                      <component id="46984" class="javax.swing.JTextField" binding="J_images">
+                        <constraints>
+                          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties/>
                       </component>
                     </children>
                   </grid>
@@ -216,7 +232,7 @@
                     <border type="none"/>
                     <children/>
                   </grid>
-                  <grid id="99c18" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="99c18" layout-manager="GridLayoutManager" row-count="8" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <tabbedpane title="Revise"/>
@@ -232,7 +248,7 @@
                           <text value="Path:"/>
                         </properties>
                       </component>
-                      <component id="42af" class="javax.swing.JTextField" binding="J_Revise_Path">
+                      <component id="42af" class="javax.swing.JTextField" binding="J_Rev_path">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -250,7 +266,7 @@
                           <text value="Summary:"/>
                         </properties>
                       </component>
-                      <component id="87466" class="javax.swing.JTextArea" binding="J_Revise_Summary">
+                      <component id="87466" class="javax.swing.JTextArea" binding="J_Rev_summary">
                         <constraints>
                           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="50"/>
@@ -292,7 +308,7 @@
                           <text value="No. of Pages:"/>
                         </properties>
                       </component>
-                      <component id="131ae" class="javax.swing.JTextField" binding="J_Revise_Writers">
+                      <component id="131ae" class="javax.swing.JTextField" binding="J_Rev_writers">
                         <constraints>
                           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -300,7 +316,7 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="f9302" class="javax.swing.JTextField" binding="J_Revise_Tags">
+                      <component id="f9302" class="javax.swing.JTextField" binding="J_Rev_tags">
                         <constraints>
                           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -308,7 +324,7 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="c3e45" class="javax.swing.JFormattedTextField" binding="J_Revise_Pages">
+                      <component id="e4390" class="javax.swing.JTextField" binding="J_Rev_pages">
                         <constraints>
                           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -316,7 +332,7 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="3a14e" class="javax.swing.JTextField" binding="J_Revise_Category">
+                      <component id="3a14e" class="javax.swing.JTextField" binding="J_Rev_category">
                         <constraints>
                           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -324,13 +340,29 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="1f91f" class="javax.swing.JButton" binding="J_Revise_Submit">
+                      <component id="1f91f" class="javax.swing.JButton" binding="J_Rev_Submit_BTN">
                         <constraints>
-                          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="26" use-parent-layout="false"/>
+                          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="26" use-parent-layout="false"/>
                         </constraints>
                         <properties>
                           <text value="Submit"/>
                         </properties>
+                      </component>
+                      <component id="325a0" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Images:"/>
+                        </properties>
+                      </component>
+                      <component id="63291" class="javax.swing.JTextField" binding="J_Rev_Images">
+                        <constraints>
+                          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties/>
                       </component>
                     </children>
                   </grid>
@@ -375,7 +407,7 @@
                     <border type="none"/>
                     <children/>
                   </grid>
-                  <grid id="7b2d" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="7b2d" layout-manager="GridLayoutManager" row-count="8" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <tabbedpane title="New Article"/>
@@ -391,7 +423,7 @@
                           <text value="Path:"/>
                         </properties>
                       </component>
-                      <component id="fd3c7" class="javax.swing.JTextField" default-binding="true">
+                      <component id="fd3c7" class="javax.swing.JTextField" binding="E_path">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -409,7 +441,7 @@
                           <text value="Summary:"/>
                         </properties>
                       </component>
-                      <component id="3cd97" class="javax.swing.JTextArea">
+                      <component id="3cd97" class="javax.swing.JTextArea" binding="E_summary">
                         <constraints>
                           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="50"/>
@@ -451,7 +483,7 @@
                           <text value="No. of Pages:"/>
                         </properties>
                       </component>
-                      <component id="c4b72" class="javax.swing.JTextField" default-binding="true">
+                      <component id="c4b72" class="javax.swing.JTextField" binding="E_writers">
                         <constraints>
                           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -459,7 +491,7 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="e5513" class="javax.swing.JTextField" default-binding="true">
+                      <component id="e5513" class="javax.swing.JTextField" binding="E_tags">
                         <constraints>
                           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -467,7 +499,7 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="582a2" class="javax.swing.JTextField" default-binding="true">
+                      <component id="582a2" class="javax.swing.JTextField" binding="E_pages">
                         <constraints>
                           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -475,7 +507,7 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="8125d" class="javax.swing.JTextField" default-binding="true">
+                      <component id="8125d" class="javax.swing.JTextField" binding="E_category">
                         <constraints>
                           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -483,17 +515,33 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="9fb4e" class="javax.swing.JButton" default-binding="true">
+                      <component id="9fb4e" class="javax.swing.JButton" binding="E_Submit_Article_BTN">
                         <constraints>
-                          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="26" use-parent-layout="false"/>
+                          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="26" use-parent-layout="false"/>
                         </constraints>
                         <properties>
                           <text value="Submit"/>
                         </properties>
                       </component>
+                      <component id="ca717" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Images:"/>
+                        </properties>
+                      </component>
+                      <component id="314c3" class="javax.swing.JTextField" binding="E_images">
+                        <constraints>
+                          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties/>
+                      </component>
                     </children>
                   </grid>
-                  <grid id="44952" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="44952" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <tabbedpane title="New Category"/>
@@ -509,7 +557,7 @@
                           <text value="Name of New Category:"/>
                         </properties>
                       </component>
-                      <component id="f3f78" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+                      <component id="f3f78" class="javax.swing.JTextField" binding="E_newCategory">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -523,6 +571,14 @@
                         </constraints>
                         <properties>
                           <text value="Parent Category (if any):"/>
+                        </properties>
+                      </component>
+                      <component id="318f8" class="javax.swing.JButton" binding="E_Category_Submit_BTN">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Submit"/>
                         </properties>
                       </component>
                     </children>
@@ -548,7 +604,7 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <grid id="373c8" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="373c8" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <tabbedpane title="Returned Papers"/>
@@ -564,13 +620,21 @@
                           <text value="No. of Sheet:"/>
                         </properties>
                       </component>
-                      <component id="8e6cd" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+                      <component id="8e6cd" class="javax.swing.JTextField" binding="A_sheet_returned">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
                           </grid>
                         </constraints>
                         <properties/>
+                      </component>
+                      <component id="edf2" class="javax.swing.JButton" binding="A_returned_Submit_BTN">
+                        <constraints>
+                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Submit"/>
+                        </properties>
                       </component>
                     </children>
                   </grid>
@@ -590,7 +654,7 @@
                           <text value="From:"/>
                         </properties>
                       </component>
-                      <component id="51ad8" class="javax.swing.JTextField" binding="textField7" default-binding="true">
+                      <component id="51ad8" class="javax.swing.JTextField" binding="A_fromMonth">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -606,7 +670,7 @@
                           <text value="To:"/>
                         </properties>
                       </component>
-                      <component id="47ad3" class="javax.swing.JTextField" binding="textField8" default-binding="true">
+                      <component id="47ad3" class="javax.swing.JTextField" binding="A_toMonth">
                         <constraints>
                           <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -622,7 +686,7 @@
                           <text value="Total:"/>
                         </properties>
                       </component>
-                      <component id="6b1eb" class="javax.swing.JButton" binding="OKButton" default-binding="true">
+                      <component id="6b1eb" class="javax.swing.JButton" binding="A_Payroll_OKBTN">
                         <constraints>
                           <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
